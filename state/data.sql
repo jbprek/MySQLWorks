@@ -1,4 +1,3 @@
-
 INSERT INTO state.in_tbl (mpin, tin, state, sn, dt) VALUES ('1', '1', 'CA', '1', '2010-01-01');
 INSERT INTO state.in_tbl (mpin, tin, state, sn, dt) VALUES ('1', '1', 'FL', '2', '2010-01-01');
 INSERT INTO state.in_tbl (mpin, tin, state, sn, dt) VALUES ('1', '1', 'CA', '3', '2010-01-02');
@@ -14,3 +13,5 @@ INSERT INTO state.in_tbl (mpin, tin, state, sn, dt) VALUES ('4', '4', 'IL', '12'
 INSERT INTO state.in_tbl (mpin, tin, state, sn, dt) VALUES ('4', '4', 'MN', '13', '2013-01-01');
 INSERT INTO state.in_tbl (mpin, tin, state, sn, dt) VALUES ('4', '4', 'IL', '14', '2013-01-02');
 INSERT INTO state.in_tbl (mpin, tin, state, sn, dt) VALUES ('4', '4', 'IL', '15', '2013-01-03');
+INSERT INTO state.in_tbl (mpin, tin, state, sn, dt) VALUES ('5', '5', 'HI', '16', '2013-01-01');
+INSERT INTO state.in_tbl (mpin, tin, state, sn, dt) VALUES ('5', '5', 'UT', '17', '2013-01-02');
