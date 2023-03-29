@@ -1,0 +1,5 @@
+#Temporary work to be automated
+#MySQL volume
+#docker volume create xa_db_jms_simple
+
+docker volume create mysql_data

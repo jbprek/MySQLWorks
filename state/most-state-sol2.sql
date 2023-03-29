@@ -19,28 +19,18 @@ create or replace view state_max_count_no_ties_view as
     having  count(*) = 1
 );
 
-select t1.mpin, t1.mpin, t1.state_count
-from state_max_count_no_ties_view t1
-         inner join (
-    select mpin, tin, max(state_count) as state_count
-    from state_max_count_no_ties_view t2
-    group by  mpin, tin
-) t2 using (mpin,tin,state_count);
-
-
-select * from state_max_count_no_ties_view;
-
 select  mpin,tin, state_count  from state_max_count_no_ties_view;
 
 create or replace view most_state_view as
 (
     select t1.mpin, t1.tin, t1.state_count
     from state_max_count_no_ties_view t1
-             inner join (
+    inner join (
         select mpin, tin, max(state_count) as state_count
         from state_max_count_no_ties_view t2
         group by  mpin, tin
-    ) t2 using (mpin,tin,state_count)
+    ) t2
+    using (mpin,tin,state_count)
 );
 
 select * from most_state_view;

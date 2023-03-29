@@ -1,0 +1,17 @@
+#Bare bones MySQL 8 for experimenting with scripts
+# Use of anonymous volume
+version: '3'
+services:
+  mysql-simple:
+    image: mysql
+    container_name: mysql-simple
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: dada
+    volumes:
+      - /usr/local/mysql-data:/var/lib/mysql
+
+
+
+

@@ -1,0 +1,19 @@
+#Bare bones MySQL 8 for experimenting with scripts
+# Need to create volume before run with docker volume create mysql_data
+version: '3'
+services:
+  mysql-simple:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      - "MYSQL_ROOT_PASSWORD=changeme"
+      - "MYSQL_DATABASE=core_domain"
+    volumes:
+      - mysql_data:/var/lib/mysql
+volumes:
+  mysql_data:
+    external: true
+
+
+

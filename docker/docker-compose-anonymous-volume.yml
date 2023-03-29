@@ -1,0 +1,17 @@
+#Bare bones MySQL 8 for experimenting with scripts
+# Use of anonymous volume
+version: '3'
+services:
+  mysql-simple:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      - "MYSQL_ROOT_PASSWORD=changeme"
+      - "MYSQL_DATABASE=core_domain"
+    volumes:
+      - /var/lib/mysql
+
+
+
+
